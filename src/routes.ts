@@ -1,17 +1,13 @@
 import { Router } from 'express'
-import { AuthenticateUserController } from './controllers/AuthenticaUserController'
-import { CreateMessageController } from './controllers/CreateMessageController'
-import { GetLast3MessagesController } from './controllers/GetLast3MessagesController'
-import { ProfileUserController } from './controllers/ProfileUserController'
-import { ensureAuthenticated } from './middleware/ensureAuthenticated'
+import { CreateStatusController } from './controllers/CreateStatusController'
+import { GetLastStatusController } from './controllers/GetLastStatusController'
+import { GetStatusController } from './controllers/GetStatusController'
 
 const router = Router()
 
-router.post('/authenticate', new AuthenticateUserController().handle)
 
-router.post('/messages', ensureAuthenticated, new CreateMessageController().handle)
 
-router.get('/messages/last3', new GetLast3MessagesController().handle)
-
-router.get('/profile', ensureAuthenticated, new ProfileUserController().handle)
+router.get('/status', new GetStatusController().handle)
+router.get('/last-status', new GetLastStatusController().handle)
+router.post('/status', new CreateStatusController().handle)
 export { router }

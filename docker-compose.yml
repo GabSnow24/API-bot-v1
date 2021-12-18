@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    env_file: .env
+    environment:
+      - BOT_TOKEN=$BOT_TOKEN
+      - CHAT_ID=$CHAT_ID
+      - CHAT_ID2=$CHAT_ID2
+      - EMAIL=$EMAIL
+      - SENHA=$SENHA
+      - LOJA=$LOJA
+      - PORT=$PORT
+    ports:
+      - "3001:3001"

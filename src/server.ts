@@ -1,3 +1,4 @@
 import { serverHttp } from "./app";
+require("dotenv-safe").config();
 
-serverHttp.listen(3000, () => console.log('🃏 Server running on PORT 3000'))
+serverHttp.listen(process.env.PORT, () => console.log(`🃏 Server running on PORT ${process.env.PORT}`))
