@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import prismaClient from "../prisma";
 import { GetStatusService } from "../services/GetStatusService";
 
 class GetStatusController {

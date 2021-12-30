@@ -2,15 +2,17 @@ version: '3'
 
 services:
   app:
-    build: .
-    env_file: .env
     environment:
-      - BOT_TOKEN=$BOT_TOKEN
-      - CHAT_ID=$CHAT_ID
-      - CHAT_ID2=$CHAT_ID2
-      - EMAIL=$EMAIL
-      - SENHA=$SENHA
-      - LOJA=$LOJA
-      - PORT=$PORT
+      - BOT_TOKEN=5035451355:AAHIGWA3kvPZbBDbyRgkCLwQBDarKi_U1a0
+      - CHAT_ID=1801701296
+      - CHAT_ID2=1910993537
+      - EMAIL=biel_surf159@hotmail.com
+      - SENHA=130800Adry@
+      - LOJA=@cremosinha
+      - PORT=3001
+      - HOST=ec2-15-229-7-92.sa-east-1.compute.amazonaws.com
     ports:
-      - "3001:3001"
+      - "80:3001"
+    image: qzzdocker24/iphonebot:v1
+      
+    
